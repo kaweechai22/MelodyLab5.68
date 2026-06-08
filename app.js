@@ -431,7 +431,7 @@ function drawLongitudinalFinal(ctx, c, p, w, h){
   ctx.fill();
   ctx.font="bold 17px Sarabun, system-ui, sans-serif";
   ctx.textAlign="center";
-  ctx.fillText("Wave propagation (ทิศทางการเคลื่อนที่ของคลื่น)", w*0.51, 62);
+  ctx.fillText("ทิศทางการเคลื่อนที่ของคลื่น", w*0.51, 62);
   ctx.restore();
 
   // Equilibrium line and label
@@ -447,8 +447,7 @@ function drawLongitudinalFinal(ctx, c, p, w, h){
   ctx.fillStyle="rgba(255,255,255,.95)";
   ctx.textAlign="center";
   ctx.font="16px Sarabun, system-ui, sans-serif";
-  ctx.fillText("Equilibrium position", eqX, y0 - 88);
-  ctx.fillText("(ตำแหน่งสมดุล)", eqX, y0 - 66);
+  ctx.fillText("ตำแหน่งสมดุล", eqX, y0 - 78);
   ctx.restore();
 
 

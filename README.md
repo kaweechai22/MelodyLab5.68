@@ -326,3 +326,8 @@
 - Removed English sentence-style UI text on the Longitudinal page
 - Kept Thai as the main display language
 - Retained only essential English physics terms such as Longitudinal Wave, Wave propagation, Frequency, Amplitude A, Wave Speed v, and Equilibrium position
+
+## v5.46 Longitudinal Label Tuning
+- Removed English text "Wave propagation" from the main graph label and kept only Thai text without parentheses
+- Removed English text "Equilibrium position" from the main graph label and kept only Thai text without parentheses
+- Changed the time-speed parameter label back to English: Phase / Time Speed
