@@ -435,8 +435,8 @@ function drawLongitudinalFinal(ctx, c, p, w, h){
   const rows = 4;
   const rowGap = 16;
   const particleRadius = 6.8;
-  const y0 = Math.max(230, h * 0.56);
-  const axisY = y0 + rowGap * 3 + 18;
+  const y0 = Math.max(232, h * 0.72);
+  const axisY = y0 + rowGap * 3 + 8;
   const xMin = pad + 32;
   const xMax = w - pad - 54;
 
@@ -460,7 +460,7 @@ function drawLongitudinalFinal(ctx, c, p, w, h){
     g.addColorStop(.5,col);
     g.addColorStop(1,"rgba(0,0,0,0)");
     ctx.fillStyle=g;
-    ctx.fillRect(bx-58,108,116,Math.max(150, axisY - 88));
+    ctx.fillRect(bx-58,140,116,Math.max(120, axisY - 132));
   });
 
   // Title label on canvas
@@ -475,18 +475,18 @@ function drawLongitudinalFinal(ctx, c, p, w, h){
   ctx.fillStyle="rgba(34,211,238,.95)";
   ctx.lineWidth=4;
   ctx.beginPath();
-  ctx.moveTo(w*0.30,84);
-  ctx.lineTo(w*0.72,84);
+  ctx.moveTo(w*0.32,118);
+  ctx.lineTo(w*0.68,118);
   ctx.stroke();
   ctx.beginPath();
-  ctx.moveTo(w*0.72,84);
-  ctx.lineTo(w*0.70,72);
-  ctx.lineTo(w*0.70,96);
+  ctx.moveTo(w*0.68,118);
+  ctx.lineTo(w*0.66,106);
+  ctx.lineTo(w*0.66,130);
   ctx.closePath();
   ctx.fill();
   ctx.font="bold 17px Sarabun, system-ui, sans-serif";
   ctx.textAlign="center";
-  ctx.fillText("ทิศทางการเคลื่อนที่ของคลื่น", w*0.51, 62);
+  ctx.fillText("ทิศทางการเคลื่อนที่ของคลื่น", w*0.50, 96);
   ctx.restore();
 
   // Equilibrium line and label
@@ -495,14 +495,14 @@ function drawLongitudinalFinal(ctx, c, p, w, h){
   ctx.setLineDash([8,8]);
   ctx.lineWidth=2;
   ctx.beginPath();
-  ctx.moveTo(eqX, y0 - 74);
+  ctx.moveTo(eqX, y0 - 44);
   ctx.lineTo(eqX, y0 + rowGap*3 + 16);
   ctx.stroke();
   ctx.setLineDash([]);
   ctx.fillStyle="rgba(255,255,255,.95)";
   ctx.textAlign="center";
   ctx.font="16px Sarabun, system-ui, sans-serif";
-  ctx.fillText("ตำแหน่งสมดุล", eqX, y0 - 74);
+  ctx.fillText("ตำแหน่งสมดุล", eqX, y0 - 48);
   ctx.restore();
 
 

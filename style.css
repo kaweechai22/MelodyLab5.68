@@ -1853,3 +1853,35 @@ main.wrap{
   .longitudinalFocusPage .vizMediaFrame canvas{aspect-ratio:1200 / 410 !important;}
   .longitudinalFocusPage .embeddedPlayerBar{margin-top:4px !important;}
 }
+
+
+/* v5.56: tighter mobile longitudinal layout */
+.longitudinalFocusPage .vizMediaFrame canvas{aspect-ratio:1200/500 !important;}
+.longitudinalFocusPage .embeddedPlayerBar{padding:8px 12px !important; min-height:64px !important;}
+@media(max-width:760px){
+  .longitudinalFocusPage .vizMediaFrame canvas{aspect-ratio:1200/430 !important;}
+  .longitudinalFocusPage .embeddedPlayerBar{padding:6px 10px !important; min-height:60px !important;}
+}
+@media(max-width:950px) and (orientation:landscape){
+  .longitudinalFocusPage .vizMediaFrame canvas{aspect-ratio:1200/380 !important;}
+  .longitudinalFocusPage .embeddedPlayerBar{padding:6px 10px !important; min-height:58px !important;}
+}
+
+
+/* v5.57: make longitudinal graph more prominent on mobile while preserving all elements */
+.longitudinalFocusPage .vizMediaFrame canvas{min-height:380px !important; aspect-ratio:1200/440 !important;}
+.longitudinalFocusPage .embeddedPlayerBar{margin-top:6px !important; min-height:72px !important; padding:8px 12px 10px !important;}
+@media (max-width:760px){
+  .longitudinalFocusPage .vizMediaFrame canvas{min-height:300px !important; aspect-ratio:1200/380 !important;}
+  .longitudinalFocusPage .embeddedPlayerBar{margin-top:4px !important; min-height:64px !important; padding:7px 10px 9px !important;}
+  .longitudinalFocusPage .embeddedPlayerBar .playerCenterOnly{gap:16px !important;}
+  .longitudinalFocusPage .embeddedPlayerBar .playerBtn{width:50px !important; height:50px !important;}
+  .longitudinalFocusPage .embeddedPlayerBar .playerPrimary{width:60px !important; height:60px !important;}
+}
+@media (max-width:950px) and (orientation:landscape){
+  .longitudinalFocusPage .vizMediaFrame canvas{min-height:240px !important; aspect-ratio:1200/320 !important;}
+  .longitudinalFocusPage .embeddedPlayerBar{margin-top:4px !important; min-height:60px !important; padding:6px 10px 8px !important;}
+  .longitudinalFocusPage .embeddedPlayerBar .playerCenterOnly{gap:14px !important;}
+  .longitudinalFocusPage .embeddedPlayerBar .playerBtn{width:46px !important; height:46px !important;}
+  .longitudinalFocusPage .embeddedPlayerBar .playerPrimary{width:56px !important; height:56px !important;}
+}
