@@ -1,8 +1,8 @@
-<!DOCTYPE html><html lang="th"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MelodyLab v5.135 - Sound Refraction (การหักเหของเสียง)</title><meta name="description" content="MelodyLab ห้องทดลองเสียงและเก็บข้อมูล ด้วยมือถือ"><meta name="theme-color" content="#0f172a"><link rel="manifest" href="manifest.json"><link rel="icon" type="image/png" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><link rel="stylesheet" href="style.css"><meta name="melodylab-build-version" content="v5.135-sound-refraction-release-audit-fix"></head><body class="detailPage page-visualizer"><header><div class="wrap nav detailNav"><button class="backBtn" onclick="location.href='visualizer.html'">←</button><a class="brand" href="index.html"><img src="icon-192.png" alt="MelodyLab"><span>Sound Refraction (การหักเหของเสียง)</span></a></div></header>
+<!DOCTYPE html><html lang="th"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MelodyLab v5.137 - Sound Refraction (การหักเหของเสียง)</title><meta name="description" content="MelodyLab ห้องทดลองเสียงและเก็บข้อมูล ด้วยมือถือ"><meta name="theme-color" content="#0f172a"><link rel="manifest" href="manifest.json"><link rel="icon" type="image/png" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><link rel="stylesheet" href="style.css"><meta name="melodylab-build-version" content="v5.137-sound-refraction-canvas-polish"></head><body class="detailPage page-visualizer"><header><div class="wrap nav detailNav"><button class="backBtn" onclick="location.href='visualizer.html'">←</button><a class="brand" href="index.html"><img src="icon-192.png" alt="MelodyLab"><span>Sound Refraction (การหักเหของเสียง)</span></a></div></header>
 <main class="wrap detailMain" data-current="visualizer">
 <section class="section activeDetail visualizerSinglePage visualizerTemplatePage longitudinalFocusPage rebuiltTopicPage" id="visualizer" data-viz-mode="soundRefraction">
   <div class="sectionHead templateHead">
-    <div><h2>Sound Refraction (การหักเหของเสียง)</h2><p class="sectionLead">แบบจำลองการหักเหของเสียงในอากาศที่มีอุณหภูมิต่างกัน โดยจัดวางองค์ประกอบให้สอดคล้องกับภาพอ้างอิง และเพิ่มโหมดเกรเดียนเพื่อเชื่อมโยงสู่กรณีที่อุณหภูมิเปลี่ยนแปลงอย่างต่อเนื่อง</p></div>
+    <div><h2>Sound Refraction (การหักเหของเสียง)</h2><p class="sectionLead">จำลองการหักเหของเสียงเมื่อคลื่นเสียงผ่านอากาศที่มีอุณหภูมิต่างกัน โดยเน้นทิศทางรังสีเสียง แนวหน้าคลื่น และการวัดมุมจากเส้นแนวฉาก</p></div>
   </div>
   <div class="visualizerTemplateGrid longitudinalFocusGrid">
     <div class="card mainViz templateMainViz longitudinalMainViz">
@@ -20,38 +20,34 @@
       <details class="explainDetails"><summary>คำอธิบายเพิ่มเติม</summary>
         <div class="detailsBody"><div class="templateUnderCanvas explainGrid">
           <div class="templateInsightCard"><div class="insightTitle">สาระสำคัญที่ควรสังเกต</div><ul>
-                <li>เมื่อคลื่นเสียงเคลื่อนที่ผ่านบริเวณอากาศที่มีอุณหภูมิต่างกัน ความถี่ของเสียงจะคงเดิม แต่ความเร็วเสียงและความยาวคลื่นจะเปลี่ยนแปลงตามอุณหภูมิ</li>
-                <li>มุมตกกระทบและมุมหักเหต้องวัดจากเส้นแนวฉาก ณ จุดที่คลื่นเสียงผ่านรอยต่อของสองบริเวณ</li>
-                <li>หน้าคลื่นต้องตั้งฉากกับทิศการเคลื่อนที่ของเสียงเสมอ ดังนั้นการเปลี่ยนทิศของรังสีเสียงจะต้องสอดคล้องกับแนวหน้าคลื่น</li>
-                <li>หากเสียงเดินทางจากบริเวณที่มีอุณหภูมิสูงกว่า (ความเร็วเสียงมากกว่า) ไปยังบริเวณที่มีอุณหภูมิต่ำกว่า (ความเร็วเสียงน้อยกว่า) เสียงจะหักเหเข้าหาเส้นแนวฉาก</li>
-                <li>ในกรณีที่ผลต่างอุณหภูมิระหว่างสองบริเวณมีค่าน้อย มุมหักเหที่เกิดขึ้นจริงจะเปลี่ยนแปลงเพียงเล็กน้อย ซึ่งเป็นลักษณะปกติทางฟิสิกส์</li>
-                <li>โหมดเกรเดียนใช้สำหรับอธิบายกรณีที่อุณหภูมิเปลี่ยนแปลงอย่างต่อเนื่อง ทำให้แนวการเคลื่อนที่ของเสียงและแนวหน้าคลื่นค่อย ๆ เปลี่ยนทิศอย่างต่อเนื่องเช่นกัน</li>
+                <li>ความถี่ของเสียงคงเดิม แต่ความเร็วเสียงเปลี่ยนตามอุณหภูมิของอากาศ</li>
+                <li>มุมตกกระทบและมุมหักเหต้องวัดจากเส้นแนวฉาก ณ รอยต่อของสองบริเวณ</li>
+                <li>จากบริเวณที่อากาศอุ่นกว่าไปสู่อากาศเย็นกว่า เสียงจะหักเหเข้าหาเส้นแนวฉาก และในทางกลับกันจะหักเหออกจากเส้นแนวฉาก</li>
+                <li>โหมดเกรเดียนใช้สำหรับอธิบายกรณีที่อุณหภูมิเปลี่ยนแปลงอย่างต่อเนื่อง จึงไม่มีมุมหักเหเพียงค่าเดียว</li>
           </ul></div>
           <div class="templateLegendCard">
-            <div class="legendRow"><span class="legendDot cyan"></span><span>หน้าคลื่นของเสียง (Wavefront)</span></div>
-            <div class="legendRow"><span class="legendDot red"></span><span>รังสีเสียงหรือทิศการเคลื่อนที่ของเสียง (Ray)</span></div>
+            <div class="legendRow"><span class="legendDot cyan"></span><span>หน้าคลื่นของเสียง</span></div>
+            <div class="legendRow"><span class="legendDot red"></span><span>รังสีเสียง (ทิศการเคลื่อนที่ของเสียง)</span></div>
             <div class="legendRow"><span class="legendMark">⋯</span><span>เส้นแนวฉากที่ใช้วัดมุม</span></div>
             <div class="legendRow"><span class="legendMark">θ</span><span>มุมที่วัดจากเส้นแนวฉาก</span></div>
-            <div class="legendRow"><span class="legendMark">v, λ, f</span><span>ค่าทางกายภาพที่ใช้ประกอบการอธิบาย</span></div>
           </div>
           <div class="templateInsightCard">
             <div class="insightTitle">ข้อสมมติของแบบจำลอง</div>
             <ul>
-              <li>ใช้ค่าประมาณความเร็วเสียงในอากาศ \(v = 331 + 0.6T\) เมื่อ \(T\) คืออุณหภูมิอากาศในหน่วยองศาเซลเซียส</li>
-              <li>แบบจำลองนี้ไม่พิจารณาผลของลม ความชื้น และความดันอากาศอย่างละเอียด</li>
-              <li>โหมดเกรเดียนเป็นภาพจำลองเชิงแนวคิด เพื่อแสดงแนวโน้มเมื่ออุณหภูมิเปลี่ยนแปลงอย่างต่อเนื่อง จึงไม่แสดงมุมหักเหเป็นค่าเดียว</li>
+              <li>ประมาณค่าความเร็วเสียงในอากาศด้วยความสัมพันธ์ v ≈ 331 + 0.6T เมื่อ T มีหน่วยเป็นองศาเซลเซียส</li>
+              <li>โหมดเกรเดียนเป็นภาพจำลองเชิงแนวคิด และไม่ได้คำนวณเส้นทางด้วยแบบจำลองเชิงตัวเลขอย่างละเอียด</li>
             </ul>
           </div>
         </div></div>
       </details>
     </div>
     <div class="card controlViz templateControlViz longitudinalControlViz neonControlViz">
-      <div class="panelTitleStack"><h3>Parameters (ตัวแปรควบคุม)</h3><p class="panelSubtext">ปรับค่าตัวแปรเพื่อศึกษาพฤติกรรมการหักเหของเสียง</p></div>
+      <div class="panelTitleStack"><h3>Parameters (ตัวแปรควบคุม)</h3><p class="panelSubtext">เน้นการวัดมุมจากเส้นแนวฉากและการเปลี่ยนทิศของเสียง</p></div>
       <div class="field richField neonParamRow">
         <div class="paramIcon">f</div>
         <div class="paramText"><label>Frequency f</label><small>ความถี่คงที่ในทั้งสองบริเวณ</small></div>
-        <input id="vizFreq" type="range" min="200" max="2000" step="10" value="800">
-        <div class="paramValueWrap"><span id="vizFreqLabel" class="valueBadge">800 Hz</span></div>
+        <input id="vizFreq" type="hidden" value="1000">
+        <div class="paramValueWrap"><span id="vizFreqLabel" class="valueBadge">f คงที่</span></div>
       </div>
       <div class="field richField neonParamRow tempTopRow">
         <div class="paramIcon">บน</div>
@@ -67,7 +63,7 @@
       </div>
       <div class="field richField neonParamRow refractionModeRow">
         <div class="paramIcon">ชั้น</div>
-        <div class="paramText"><label>รูปแบบอุณหภูมิ</label><small>เริ่มจากแบบแบ่งชั้น แล้วต่อยอดสู่แบบเกรเดียน</small></div>
+        <div class="paramText"><label>รูปแบบอุณหภูมิ</label><small>สลับดูทั้งแบบแบ่งชั้นและแบบเกรเดียน</small></div>
         <select id="vizRefractionMode">
           <option value="layer" selected>แบบแบ่งชั้น</option>
           <option value="gradient">แบบเกรเดียน</option>
